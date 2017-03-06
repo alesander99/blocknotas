@@ -1,0 +1,494 @@
+/*-----------------------------------fuentes-------------------------------------*/
+
+@font-face {
+    font-family:'UnicaOne';
+    src: url('../fonts/UnicaOne.ttf');
+}
+
+@font-face {
+    font-family:'Ubuntu';
+    src: url('../fonts/Ubuntu-LightItalic.ttf');
+}
+/*-----------------------------------fuentes------------------------------------*/
+a:hover {
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+}
+body{
+    position:relative;
+    width: 100%;
+    height: 1080px;
+    margin:0;
+    padding: 0;
+    display: flex;
+}
+
+
+/*------------venta principal de user y admin-----------------*/
+#container{
+    margin: 0 auto; /*centramos el contenedor*/
+    min-width: 320px;/*RESolucion minimo de movil*/
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container1{
+    margin: 0 auto; /*centramos el contenedor*/
+    min-width: 320px;/*RESolucion minimo de movil*/
+    width: 100%;/*poner 90% para que te cree un margen y no se pegue a los filos*/
+    height: 100%;
+    background-image: url('../img/fondo1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*para internet explored*/
+
+article,aside,figure,footer,header,group,nav,section{
+    display: block;
+}
+
+/*textos*/
+h1,h2,h3 {
+    font-family: "Unicaone", "Ubuntu";
+    font-weight: normal;
+    text-transform: uppercase;/*letrtas en mayuscula*/
+    text-align: center;
+}
+
+h1{
+    color:red;
+    font-weight: 800;/*grosor de la fuente*/
+}
+
+#error{
+    width: 100%;
+    height: 500px;
+}
+
+.menu_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+
+header nav {
+	background-color:rgba(94, 96, 97,0);
+	z-index:1000;
+	max-width: 1000px;
+	width:40%;
+	margin:2%  auto;
+    margin-right: 0%;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+    background-color:rgba(94, 96, 97,0.8);
+    margin-left: 3%;
+   
+    
+}
+
+header nav ul li:hover {
+	background:#66b4e9;
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 18px;
+    margin:0 auto;
+    
+}
+
+header nav ul li a span {
+	margin-right:15px;
+}
+
+header nav ul li:hover .children {
+	display:block;
+}
+
+header nav ul li .children {
+	display: none;
+	background:#011826;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+
+/*------------------------------------------------------mediaqueries-----------------------------------------------------*/
+@media screen and (max-width:1000px) {
+    
+	body {
+		padding-top:75px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#66b4e9;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+        background-color: #66b4e9;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+
+/*-------------------------------ventana inicio------------------------------------*/
+
+#ventanaInicio {
+    width: 32%;
+    height: 550px;
+    margin-top: 0%;
+    margin-left:34.3%;
+    background-color:rgba(94, 96, 97,0.8);
+    color:white;
+    font-family: "Unicaone";
+    font-size: 1.3;
+}
+#logo img {
+    width: 40%;
+    margin-left: 30%;
+}
+
+#ventanaInicio input {
+    border:1px solid black;
+    width: 70%;
+    height:35px;
+    margin:0 auto;
+    color: #000;
+}
+#ventanaInicio button {
+    background-color: #66b4e9;
+    color:white;
+}
+#tituloSesion{
+    font-family: "Unicaone";
+    font-size: 1.5em;
+    color:white;
+    margin:0 auto;
+    display: inline-block;
+}
+
+#tituloSesion p {
+    font-size: 0.8em;
+    display: inline-block;
+    color:black;
+}
+
+/*----------------------------venta Iniciar sesion-----------------------------------------*/
+
+button{
+    background-color:dodgerblue;/*primer campo es brillo y no va en porcentaje*/
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: inset 0 0 1px hsla(0,0%,100%,.5);
+    color:white;
+    padding: 12px 20px 14px 20px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color:#66b4e9;
+    cursor:pointer;/*aumentamos la accesibilidad y usabilidad cambiando el  puntero*/
+}
+
+button:active{
+    background-color: #66b4e9;
+    color:black;
+}
+
+#BotonRegistrar{
+    font-size: 1.5em;
+}
+
+#botonMenu{
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: inset 0 0 1px hsla(0,0%,100%,.5);
+    color:black;
+    padding: 12px 20px 14px 20px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+/*---------------------------------------------------ventana modal registrar-------------------------*/
+.modal-content {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top:30%;
+    font-family: "Unicaone";
+    font-size: 1.3;
+    color:black;
+    
+}
+
+.modal-header h4 {
+    font-family: "Unicaone";
+    font-size: 1.8em;
+    color:black;
+    margin:0 auto;
+}
+
+#formulario input {
+    border:1px solid #66b4e9;
+    width: 70%;
+    height:35px;
+    margin:0 auto;
+}
+
+.modal-footer button {
+     background-color:dodgerblue;/*primer campo es brillo y no va en porcentaje*/
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: inset 0 0 1px hsla(0,0%,100%,.5);
+    color:white;
+    
+    background-color: #66b4e9;
+    color:white;
+}
+/*---------------notas------------------*/
+#cuadro {
+    position: absolute;
+    width: 40%;
+    height: 200px;
+    margin-top:0;/*margin-top:2%;*/
+    margin-left: 30%;
+    background-color: rgba(94, 96, 97,0.6);
+    font-family: "Ubuntu";
+    color:black;
+    z-index: 3;
+}
+#cuadroEditor {
+    width: 95%;
+    height: 95%;
+    margin: 1% 1% 1% 1%;
+    margin-left:2.5%;
+    z-index: 3;
+}
+
+
+#tituloNota {
+    width: 100%;
+    height: 15%;
+    z-index: 4;
+}
+
+#tituloNota #titulo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "Ubuntu";
+    font-size: 1.6em;
+    color:black;
+    z-index: 4;
+}
+
+#cuadroTexto {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    z-index: 4;
+}
+
+#texto {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    margin: 0 auto;
+    font-family: "Ubuntu";
+    font-size: 1.1em;
+    color: white;
+    z-index: 4;
+}
+/*css de las notas que eXistan*/
+#listaNotas{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 200px;
+    justify-content: space-around;
+}
+
+#listaNotas img,
+#listaNotas video,
+#listaNotas audio{
+    max-width: 100px;
+}
+
+#campoNotas1{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    
+}
+
+#divnota{
+    background-color: #F3F781;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px black ;
+}
+
+
+/*---------------------------venta modal ayuda-------------------------------*/
+#preguntaAyuda{
+    margin-left:3%;
+    color:#66b4e9;
+    font-size:1.2em;
+}
+#respuestaAyuda{
+    margin-left:4%;
+    color:black;
+    font-size:1.1em;
+}
+/*---------------------venta principal mensaje-loggin(logeado)------------------------------*/
+    #containerUser {
+        position:relative;
+        width: 47%;
+        height: 500px;
+        
+        margin-top:10%;
+        margin-left: 25%;
+        background-color: rgba(255,255,255,0.7);
+        background-image: url("../img/nota2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+    #cuadroUser {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 10% 5% 5% 12%;
+        font-family: "UnicaOne";
+        font-size: 1.3em;
+        color: black;
+     
+    }
+
+    /*---------------------links perfil-------------------------*/
+    
+    .card-action a {
+        margin-right: 2.5%;
+    }
+
+    /*tabla de usuarios*/
+    table{
+        margin: 0 auto;
+        font-family: "UnicaOne";
+        font-size: 1.3em;
+        color:black;
+    }
+    
+    #datosUser{
+        font-family: "Ubuntu";
+        font-weight: 800;
+        font-size: 1.3em;
+        color:black;
+    }
+    
+    table tr{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    table tr td{
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+/*error*/

@@ -1,0 +1,102 @@
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div id="logo"><img src="{plantilla}/img/logo.png"/></div><br><br>
+                <center>
+                    <h4 class="modal-title">Perfil</h4>
+                </center>
+            </div>
+            <center>
+                <form action="index.php" method="post" id="formularioregis" >
+                <input type="hidden" name="ruta" value="usuario">
+                <input type="hidden" name="accion" value="doeditperfil">
+                <br><br>
+                <input id="nombre" name="nombre" type="text" size="30" value="{nombre}" placeholder=" Nombre Usuario ..." ><spam></spam>
+                <br><br>
+                <input id="email" name="email" type="email" size="30" value="{correo}" placeholder="Email ..." ><spam></spam>
+                <br><br>
+                <input id="contraseña" name="oldpassword" type="password" size="30" placeholder="Antigua Contraseña ..." ><spam></spam>
+                <br><br>
+                <input id="contraseña2" name="password" type="password" size="30" placeholder=" Nueva Contraseña ..." ><spam></spam>
+                <br><br>
+                <input id="contraseña2" name="password2" type="password" size="30" placeholder=" Repetir Nueva Contraseña ..." ><spam></spam>
+                <br><br>
+                <div class="modal-footer">
+            <center><button type="submit" class="btn btn-default">Modificar</button></center>
+            </div>
+            </form></center>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="vEditar" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div id="logo"><img src="{plantilla}/img/logo.png"/></div><br><br>
+                <center>
+                    <h4 class="modal-title">Usuario</h4>
+                </center>
+            </div>
+            <center>
+                <form action="index.php" method="post" id="formularioajax" >
+                <input type="hidden" name="ruta" value="usuario">
+                <input type="hidden" name="accion" value="doedit">
+                <input type="hidden" id="idusuario"name="idusuario" value=""/>
+                <input type="hidden" id="falta" name="falta" value=""/>
+                <input type="hidden" id="estado" name="estado" value=""/>
+                <br><br>
+                <input id="nombre1" name="nombre" type="text" size="30" value="" placeholder=" Nombre Usuario ..." ><spam></spam>
+                <br><br>
+                <input id="email1" name="email" type="email" size="30" value="" placeholder="Email ..." ><spam></spam>
+                <br><br>
+                <input id="contraseña" name="password" type="password" size="30" placeholder=" Nueva Contraseña ..." ><spam></spam>
+                <br><br>
+                <input id="contraseña2" name="password2" type="password" size="30" placeholder=" Repetir Nueva Contraseña ..." ><spam></spam>
+                <br><br>
+                <input id="tipo" name="tipo" type="text" size="30" value="" placeholder=" Tipo de Usuario..." ><spam></spam>
+                <br><br>
+                <div class="modal-footer">
+            <center><button type="submit" class="btn btn-default">Modificar</button></center>
+            </div>
+            </form></center>
+        </div>
+    </div>
+</div>
+
+
+<!-------------------------------------------------Ventana modal de ayuda(preguntas y dudas mas frecuentes)---------------------------------------------------->
+
+<div class="modal fade" id="ayuda" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div id="logo"><img src="{plantilla}/img/logo.png"/></div><br>
+                <center>
+                    <h4 class="modal-title">Preguntas mas frecuentes</h4>
+                </center>
+            </div>
+            
+            <p id="preguntaAyuda">¿Tiene alguna dorma de confirmacion la creacion de un nuevo usuario?</p>
+            <p id="respuestaAyuda">Si, se le enviara un email, al correo electronico facilitado, con en el enlace de confimacion</p>
+            
+            <p id="preguntaAyuda">¿Que tipo de contraseña debo de poner?</p>
+            <p id="respuestaAyuda">Lo normal es que sea algo personal e intrasferible.</p>
+            
+            <p id="preguntaAyuda">¿Si ya estoy registrado como inicio mi sesion?</p>
+            <p id="respuestaAyuda">Cuando usted tiene ya una cuenta registrada puede entrar o bien por el enlace de confirmacion automaticamente, o bien desde la pantalla inicial de la aplicacion.</p>
+            
+            <p id="preguntaAyuda">¿Que puedo añadir a una nota?</p>
+            <p id="respuestaAyuda">Puede añadirle desde un texto, hasta una imagen, video o audio dentro de la misma nota.</p>
+            
+            <p id="preguntaAyuda">¿Cual es el limite de archivos por nota?</p>
+            <p id="respuestaAyuda">Podra subir hasta un archivo de cada opcion(imagen,video y audio). </p>
+            
+        </div>
+    </div>
+</div>

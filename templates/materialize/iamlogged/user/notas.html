@@ -1,0 +1,30 @@
+<h1>Tus Notas</h1>
+    <div id="campoNotas">
+        <div id="cuadro">
+            <div id="cuadroEditor">
+            <form action="index.php" enctype="multipart/form-data" method="post">
+                <input type="hidden" name="ruta" value="nota">
+                <input type="hidden" name="accion" value="doCrearNota">
+                <div id="tituloNota">
+                    <input id="titulo" placeholder=" Titulo " value="" type="text" name="asunto"><spam></spam>
+                </div>
+                <div class="input-field">
+                    <input  id="dato" type="file" name="dato" ><spam></spam>
+                </div>
+                <div id="cuadroTexto">
+                    <script type="text/javascript" src="nicEdit.js"></script>
+                    <script type="text/javascript">
+                    	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+                    </script>
+                    <textarea name="texto" id="texto"></textarea><spam></spam>
+                </div>
+                    <input type="submit" value="Crear"/>
+            </form>
+            </div>
+        </div>
+    </div>
+<div>
+    <div id="campoNotas1">
+        <ul id="listaNotas">{nota}</ul>
+    </div>
+</div>

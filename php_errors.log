@@ -1,0 +1,30 @@
+[15-Nov-2016 12:05:39 UTC] PHP Warning:  require(/home/ubuntu/workspace/notas/Credenciales/vendor/guzzlehttp/psr7/src/functions_include.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php on line 66
+[15-Nov-2016 12:05:39 UTC] PHP Stack trace:
+[15-Nov-2016 12:05:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:0
+[15-Nov-2016 12:05:39 UTC] PHP   2. require_once() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:7
+[15-Nov-2016 12:05:39 UTC] PHP   3. ComposerAutoloaderInit47bf295d6ead648979532fafda234238::getLoader() /home/ubuntu/workspace/notas/Credenciales/vendor/autoload.php:7
+[15-Nov-2016 12:05:39 UTC] PHP   4. composerRequire47bf295d6ead648979532fafda234238() /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php:56
+[15-Nov-2016 12:05:39 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/notas/Credenciales/vendor/guzzlehttp/psr7/src/functions_include.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php on line 66
+[15-Nov-2016 12:05:39 UTC] PHP Stack trace:
+[15-Nov-2016 12:05:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:0
+[15-Nov-2016 12:05:39 UTC] PHP   2. require_once() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:7
+[15-Nov-2016 12:05:39 UTC] PHP   3. ComposerAutoloaderInit47bf295d6ead648979532fafda234238::getLoader() /home/ubuntu/workspace/notas/Credenciales/vendor/autoload.php:7
+[15-Nov-2016 12:05:39 UTC] PHP   4. composerRequire47bf295d6ead648979532fafda234238() /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php:56
+[15-Nov-2016 12:05:54 UTC] PHP Warning:  require(/home/ubuntu/workspace/notas/Credenciales/vendor/guzzlehttp/psr7/src/functions_include.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php on line 66
+[15-Nov-2016 12:05:54 UTC] PHP Stack trace:
+[15-Nov-2016 12:05:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:0
+[15-Nov-2016 12:05:54 UTC] PHP   2. require_once() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:7
+[15-Nov-2016 12:05:54 UTC] PHP   3. ComposerAutoloaderInit47bf295d6ead648979532fafda234238::getLoader() /home/ubuntu/workspace/notas/Credenciales/vendor/autoload.php:7
+[15-Nov-2016 12:05:54 UTC] PHP   4. composerRequire47bf295d6ead648979532fafda234238() /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php:56
+[15-Nov-2016 12:05:54 UTC] PHP Fatal error:  require(): Failed opening required '/home/ubuntu/workspace/notas/Credenciales/vendor/guzzlehttp/psr7/src/functions_include.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php on line 66
+[15-Nov-2016 12:05:54 UTC] PHP Stack trace:
+[15-Nov-2016 12:05:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:0
+[15-Nov-2016 12:05:54 UTC] PHP   2. require_once() /home/ubuntu/workspace/notas/Credenciales/GuardarCredenciales.php:7
+[15-Nov-2016 12:05:54 UTC] PHP   3. ComposerAutoloaderInit47bf295d6ead648979532fafda234238::getLoader() /home/ubuntu/workspace/notas/Credenciales/vendor/autoload.php:7
+[15-Nov-2016 12:05:54 UTC] PHP   4. composerRequire47bf295d6ead648979532fafda234238() /home/ubuntu/workspace/notas/Credenciales/vendor/composer/autoload_real.php:56
+[17-Nov-2016 16:40:17 UTC] PHP Warning:  require_once(../clases/vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/notas/Credenciales/PedirCredenciales.php on line 3
+[17-Nov-2016 16:40:17 UTC] PHP Stack trace:
+[17-Nov-2016 16:40:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/PedirCredenciales.php:0
+[17-Nov-2016 16:40:17 UTC] PHP Fatal error:  require_once(): Failed opening required '../clases/vendor/autoload.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/notas/Credenciales/PedirCredenciales.php on line 3
+[17-Nov-2016 16:40:17 UTC] PHP Stack trace:
+[17-Nov-2016 16:40:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/notas/Credenciales/PedirCredenciales.php:0

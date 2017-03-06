@@ -1,0 +1,1006 @@
+@font-face {
+    font-family:'UnicaOne';
+    src: url('fuentes/UnicaOne.ttf');
+}
+
+@font-face {
+    font-family:'Ubuntu';
+    src: url('fuentes/Ubuntu-LightItalic.ttf');
+}
+
+/*--------------------------header------------------------*/
+
+body{
+    margin:0;
+    padding: 0; 
+    background-color: rgba(255, 255, 255, .5);
+}
+#index {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    
+}
+h1{
+    font-family: "UnicaOne";
+    font-size: 2.6em;
+    color:black;
+    
+}
+h2{
+    font-family: "UnicaOne";
+    font-size: 1.6em;
+    color:black;
+    
+}
+
+/*para internet explored*/
+
+article,aside,figure,footer,header,group,nav,section,p{
+    display: block;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------SLIDER------------------------------------------------------------------------*/
+/*-----------Imagenes fondo------------*/
+
+#fondo {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    top:0;
+}
+#fondo  ul {
+    display: flex;
+    padding: 0;
+    margin:0;
+    width: 400%;
+    animation: cambio 23s infinite alternate; /*animacion que cambia de img cada 20 segundos, sera infinitos movimientos y cuando llegue a la ultima foto volvera en direccion inversa.*/
+    animation-duration: ease-in; /*tipo de animacion y movimento*/
+}
+#fondo  ul li {
+    width: 100%;
+    list-style: none;
+}
+#fondo  img {
+    width: 100%;
+    list-style: none;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+#cabecera{
+    position: relative;
+    margin: 0 auto; /*centramos el contenedor*/
+    min-width: 320px;/*RESolucion minimo de movil*/
+    width: 100%;
+    height: 124px;
+    z-index:1;
+    background-color:rgba(255, 255, 255, .3); /*cuadro blanco con trasparencias"la a de alfa hace referacia a la trasparecia"*/
+}
+
+
+/*------------nombre empresa-------------*/
+
+    #logo {
+        position: absolute;
+        width: 12%;
+        height: 110px;
+        margin-top: 0.5%;
+        margin-left:10%;
+        z-index: 3;
+        line-height:0.8;
+    }
+    #logo img {
+        width: 100%;
+        height: 100%;
+        margin:0 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+/*--------------------Links-Navegador-------------*/    
+    .main-nav {
+       z-index:2;
+        position: absolute;
+        width:100%;
+        height:124px;
+        list-style:none;
+        background-color:rgba(255, 255, 255, .3);
+    }
+    #lista-link {
+        display: flex;
+        padding-right: 10%;
+        margin-top: 0;
+        justify-content: flex-end;/*indica que los elementos se alineen hacia el punto del final de la linea*/
+        list-style: none;/*quitamos las viñetas o dibujos*/
+        font-family: "Exo";
+        font-size: 1.8em;
+        background-color:rgba(255, 255, 255, .3);
+        z-index: 2;
+    }
+
+        #lista-link li{
+            background-color:rgba(255, 255, 255, .0);
+            text-align: center;/*NOs aseguramos que siempre estaran centrados respecto a su contenedor*/
+        }
+
+            #lista-link li a {
+                color:black;
+                text-decoration:none;
+                padding:46px 20px;
+                display:block;
+                transition:all 0.8s ease;
+            }
+
+            #lista-link li a:hover {
+                text-decoration:underline;
+                padding:42px 20px;
+                transform: scale(1.1);
+                transition: all 500ms ease-in-out;
+                color:#66b4e9;
+                text-shadow: 1px 1px black;
+            }
+
+            #lista-link li ul {
+                display:none;
+                position:absolute;
+                padding: 0;
+                min-width:120px;
+                list-style: none;
+            }
+
+            #lista-link li:hover > ul {
+                display:block;
+                
+            }
+            
+        /*.isStuck {
+            width: 100%;
+            position: fixed;
+            top:0px;
+        }
+        a.current {
+            background-color: #222;            
+        }*/
+/*------------eslogan/frases publicitarias-------------*/
+        
+
+        #texto1-negro {
+           position: absolute;
+            width: 60%;
+            height: 50%;
+            margin-top:22%;
+            margin-left:22%;
+            text-align: center;
+            color:white;
+            font-family: "Syncopate-Regular";
+            font-size: 3.5em;
+            line-height:1;/*espacios entre lineas o parrafos*/
+            z-index: 3;
+        }
+
+        #texto1-azul{
+            text-align: center;
+            color:#66b4e9;
+            font-family: "Syncopate-Bold";
+            font-size: 2em;
+            line-height:0;
+        }
+        #texto1-pequeño{
+            color:white;
+            font-family: "Syncopate-Regular";
+            font-size: 0.5em;
+            line-height:1.5;
+        }
+
+
+/*-------------------------------------------body y scroll-----------------------------------*/
+    #scroll-1 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url("Imagenes/fondo10.jpg");
+        background-position: center;
+        background-attachment: fixed;/*dejamos la imagen fija para que los contenedores sean los que se muevan, y asi crear el efecto scroll*/
+    }
+
+    #vacio1{
+        /*este contenedor vacio, crea el hueco vacio para que se vea la imagen de fondo*/
+        width: 100%;
+        height: 900px; 
+    }
+    #texto-vacio1{
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        top:1150px;
+        left: 27%;
+        margin: 0 auto;
+        font-family: "Ubuntu";
+        font-size: 2.5em;
+        text-align: center;
+        color:#4cb4da;
+    }
+    #titulo-vacio1{
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        top:1400px;
+        left: 27%;
+        margin: 0 auto;
+        font-family: "Ubuntu";
+        font-size: 3em;
+        text-align: center;
+        color:white;
+    }
+
+    #vacio2 {
+        /*este contenedor vacio, crea el hueco vacio para que se vea la imagen de fondo*/
+        width: 100%;
+        height: 1600px; 
+    }
+
+    #bloque1 {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        background-color:white;
+        margin: 0 auto;
+        font-family: "UnicaOne";
+        font-size: 2em;
+        text-align: center;
+        color:#4cb4da;
+    }
+    
+  /*------------info empesa---------------*/
+    #infoCuadros{
+        margin-top: 2%;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    #cuadro{
+        flex: 1 0 200px;/*valor fijo para ocupar todo el mismo tamaño como min-width*/
+        margin:0  0 20px 20px;
+        background: white;
+        text-align-last: center;
+    }
+#cuadro h2{
+    color:#4cb4da;
+}
+    #cuadro img{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #Info {
+        font-size: 0.6em;
+        color:black;
+        
+    }
+
+    #infoEmpresa{
+        margin-top:1%;
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        font-size: 0.8em;    
+    }
+    #textoEmpresa{
+        margin:2% 5% 2% 5%;
+        color:black;
+    }
+    #textoEmpresa h2{
+        color:#4cb4da;
+    }
+
+
+
+/*----------------------------Equipo----------------------*/
+    #bloque2 {
+            position: absolute;
+            width: 100%;
+            height: 1000px;
+            background-color:black;
+            margin: 0 auto;
+            font-family: "UnicaOne";
+            font-size: 2em;
+            text-align: center;
+            color:#4cb4da;
+            display: flex;
+            margin-right: 20px;
+    }
+    #equipo{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin:0 auto;
+        margin:2.5% 2% 2% 2%;
+    }
+
+    #cuadroTeam{
+        width: 100%;
+        height: 300px;
+    }
+
+    #cuadroIzquierda {
+        width: 50%;
+        height: 100%; 
+        float:left;
+    }
+    #cuadroIzquierda img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border:1px solid black;
+    }
+
+    #cuadroDerecha {
+        width: 50%;
+        height: 100%; 
+        float:left;
+    }
+
+    #cuadroderecha p {
+        width: 45%;
+        height: 90%;
+        color:#4cb4da;
+        font-size: 0.7em;
+    }
+#vacio3{
+     width: 100%;
+    height: 1000px; 
+}
+/*-----------------------------proyecto----------------------------*/
+ #scroll-2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url("Imagenes/fondo7.jpg");
+        background-position: center;
+        background-attachment: fixed;/*dejamos la imagen fija para que los contenedores sean los que se muevan, y asi crear el efecto scroll*/
+    }    
+    #vacio4 {
+        width: 100%;
+        height: 500px; 
+        
+    }
+    #bloque3 {
+        position: absolute;
+        width: 100%;
+        height:800px;
+        background-color:white;
+        margin: 0 auto;
+        font-family: "UnicaOne";
+        font-size: 2em;
+        text-align: center;
+        color:black;
+        display: flex;
+        margin-right: 20px;
+    }
+#texto-equipo{
+    display: inline;
+    margin: 3% 2.5% 2% 2%;
+    left: 3%;
+    width: 40%;
+    height: 800px;
+    overflow: hidden;
+    position: absolute;
+    cursor:default;
+    font-family: "UnicaOne";
+    font-size:1em;
+}
+#texto-equipo p {
+    font-size: 1.2;
+    color:#4cb4da;
+}
+
+#galeria2 {
+    width: 45%;
+    height: 800px;
+    position:absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 1;
+    display: inline;
+    margin: 3.5% 2.5% 5% 3%;
+    right: 3%;
+    text-align: center;
+    cursor:default;
+}
+#galeria2  ul {
+    display: flex;
+    width: 400%;
+    padding:0;
+    animation: cambio 23s infinite alternate; /*animacion que cambia de img cada 20 segundos, sera infinitos movimientos y cuando llegue a la ultima foto volvera en direccion inversa.*/
+    animation-duration: ease-in; /*tipo de animacion y movimento*/
+}
+#galeria2  ul li {
+    width: 100%;
+    list-style: none;
+}
+#galeria2  img {
+    width: 100%;
+    
+    list-style: none;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+#vacio5{
+    width: 100%;
+        height: 800px; 
+}
+#oficina{
+    width: 100%;/*566/900=0.628888888=62,88888%*/
+    background-color:#E6E6E6;
+    height: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    text-align: center;
+    font-family: "Syncopate-Regular";
+    font-size: 2em;
+    text-align: center;
+    color:#4cb4da; 
+}
+#texto-oficina {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Syncopate-Regular";
+    font-size: 1em;
+    text-align: center;
+    color:#4cb4da;
+}
+#oficina1 , #oficina2{   
+    flex: 1 0 600px;
+    height: 800px;
+    margin:0  0 3% 4%;
+    border:5px solid #4cb4da;
+    margin-top: 30px;
+    margin-right:30px;
+    color: white;
+    text-align-last: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#oficina1 img , #oficina img , #oficina3 img , #oficina4 img {
+    width: 100%;
+    height: 100%;
+}
+
+#boton{
+    text-decoration: none;
+    padding: 18px;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+
+  #boton:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+
+
+/*--------------------------------contacto----------------------------*/
+#contacto{
+    width: 100%;
+    height: 900px;
+    background-color: #E6E6E6;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10px;
+    font-family: "UnicaOne";
+    text-align: center;
+    color: #4cb4da;
+}
+
+#info {
+    display: inline;
+    margin: 3% 4% 3% 2%;
+    left: 8%;
+    width: 35%;
+    height: 750px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    cursor:default;
+    
+}
+#info label {
+    text-align: left;
+    font-family: "UnicaOne";
+    font-size: 1.8em;
+    text-align: center;
+    color: #4cb4da;
+}
+#info input {
+    border: 2px solid #4cb4da;
+    width: 95%;
+    height: 40px;
+}
+#info textarea {
+    border: 2px solid #4cb4da;
+    width: 95%;
+    height: 120px;
+}
+
+#map {
+    display: inline;
+    margin: 3% 2% 3% 4%;
+    right: 3%;
+    width: 45%;
+    height: 750px;
+    
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    cursor:default;
+}
+#map iframe {
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+#infoContacto {
+     width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    text-align: left;
+    font-family: "UnicaOne";
+    font-size: 1.8em;
+    text-align: center;
+    color: #4cb4da;
+}
+/*----------------contenedor mensajes clientes-----------*/
+#contactoSMS{
+    width: 100%;
+    height: 400px;
+    background-color:white;
+    margin: 0 auto;
+    font-family: "UnicaOne";
+    font-size: 1.7em;
+    text-align: center;
+    color:#4cb4da;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+#textoClientes {
+    font-family: "UnicaOne";
+    font-size: 2em;
+}
+#mensajes {
+    position:absolute;
+    width: 75%;
+    height: 250px;
+    overflow: hidden;
+    z-index: 1;
+    margin-top:7%;
+    display: inline;
+    right: 13%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    cursor:default;
+}
+
+#contactoSMS  ul {
+    display: flex;
+    width: 400%;
+    padding:0;
+    animation: cambio 24s infinite alternate; /*animacion que cambia de img cada 20 segundos, sera infinitos movimientos y cuando llegue a la ultima foto volvera en direccion inversa.*/
+    animation-duration: ease; /*tipo de animacion y movimento*/
+}
+#contactoSMS  ul li {
+    width: 100%;
+    list-style: none;
+}
+#contactoSMS  p {
+    width: 100%;
+    
+    list-style: none;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+/*-------------------------footer------------------------------*/
+
+#cuadroFooter {
+    position:absolute;
+    width: 100%;
+    height:750px;
+    background-color: gray;
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: "UnicaOne";
+    text-align: center;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+    z-index: 1
+}
+
+#footer1 ,#footer2 , #footer3 { 
+    width: 30%;
+    height: 600px;
+    margin:0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+    font-size: 2.4em;
+}
+
+#footer1 img {
+    width: 22%;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:4% 3% 3% 3%;
+    cursor: pointer;
+    
+}
+#footer2 a {
+    text-decoration:none;
+    color:white;
+}
+
+
+#logoFooter {
+    text-shadow: 3px 3px 2px black;
+    margin-top:8%;
+    margin-left:3%;
+    color:white;
+    font-family: "Prozalibre";
+    font-size: 1.4em;
+    z-index: 3;
+    line-height:0.8;
+}
+#logo-azulFooter {
+    font-family: "Sunset-Clouds";
+    color:#4cb4da;
+    font-size: 0.9em;
+    line-height:0;
+}
+
+#footer3 label {
+    text-align: left;
+    
+}
+#footer3 input {
+    margin:3%;
+    border: 2px solid #4cb4da;
+    width: 85%;
+    height: 40px;
+}
+#footer3 textarea {
+    border: 2px solid #4cb4da;
+    width: 85%;
+    height: 120px;
+}
+
+#miniFooter {
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 30px;
+    justify-content:center;
+    font-size: 1.4em;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------MediaQuerie-----------------------------------------------------------------------*/
+/*-----------------------corte en 1470px--------------------*/
+@media screen and (max-width:1470px){ 
+#texto-vacio3{
+    top:5110px;
+    font-size: 2.3em;
+}
+#titulo-vacio3{
+    top:5375px;
+    font-size: 2.8em;
+}
+
+  #texto-vacio4{
+      font-size: 2em;
+    top:6050px;
+}
+#titulo-vacio4{
+    top:6700px;
+    font-size: 2.8em;
+}
+
+#texto-vacio5{
+    top:9120px;
+    font-size: 2em;
+}
+#titulo-vacio5{
+    top:9415px;
+    font-size: 2.8em;
+}
+#texto-vacio6{
+    top:12250px;
+    font-size: 2.3em;
+}
+#titulo-vacio6{
+    top:12480px;
+    font-size: 2.8em;
+}
+#titulo-vacio7{
+    top:14180px; 
+    font-size: 2.8em;
+}
+/*-----------------------corte en 1300px--------------------*/
+@media screen and (max-width:1300px){ 
+        
+    
+    #lista-link {     
+        font-size: 1.75em;
+        margin-right: 1.3%;  
+    }
+    #lista-link li a {
+        padding:46px 19.5px;
+        
+    }
+
+    #logo {
+        position: absolute;
+        width: 10%;
+        height: 100px;
+        margin-top: 1.5%;
+        margin-left:10%;
+        z-index: 3;
+        line-height:0.8;
+    }
+   
+    
+    #vacio1{
+    /*este contenedor vacio, crea el hueco vacio para que se vea la imagen de fondo*/
+    width: 100%;
+    height: 1180px;
+    }
+    
+    #texto-vacio1{
+    top:875px;
+    font-size:2em; 
+    }
+    #titulo-vacio1{
+    top:1100px;
+    font-size:2.5em;    
+    }
+    
+    #bloque1 {
+        height: 700px;
+    }
+    .contenedor-img-1 ,.contenedor-img-2,
+    .contenedor-img-3,.contenedor-img-4, 
+    .contenedor-img-5, .contenedor-img-6 {
+        height: 550px;
+    }
+    
+    #video2 , #video3 {
+        height: 550px;
+    }
+    
+    #texto-vacio3{
+        top:3500px;
+        font-size: 2em;
+    }
+    #titulo-vacio3{
+        top:3800px;
+        font-size: 2.5em;
+    }
+}
+
+/*----------------------------------corte de 1750-------------------*/
+@media screen and (max-width:1750px){
+    #texto-vacio1{
+    top:1115px;
+    }
+    #titulo-vacio1{
+    top:1400px;
+        
+    }
+    
+}
+
+@media screen and (max-width:1550px){
+    #texto-vacio1{
+    top:1050px;
+    }
+    
+}
+
+/*-----------------------corte en 1150px--------------------*/
+@media screen and (max-width:1150px){
+     #logo {
+        position: absolute;
+        width: 12%;
+        height: 100px;
+        margin-top: 1%;
+        margin-left:11%;
+        z-index: 3;
+        line-height:0.8;
+    }
+    
+    #lista-link {     
+        font-size: 1.7em;
+    }
+    #lista-link li a {
+        padding:47px 19px;
+        
+    }
+    #vacio1{
+    /*este contenedor vacio, crea el hueco vacio para que se vea la imagen de fondo*/
+    width: 100%;
+    height: 1080px;
+    }
+    
+    #texto-vacio1{
+    top:800px;
+    font-size:1.8em; 
+    }
+    #titulo-vacio1{
+    top:1000px;
+    font-size:2.3em;    
+    }
+}
+
+
+
+/*-----------------------corte en 1050px--------------------*/
+@media screen and (max-width:1050px){
+    #logo {
+        position: absolute;
+        width: 12%;
+        height: 100px;
+        margin-top: 1%;
+        margin-left:11%;
+        z-index: 3;
+        line-height:0.8;
+    }
+    
+    #lista-link {     
+        font-size: 1.6em;
+    }
+    #lista-link li a {
+        padding:47px 18px;
+        
+    }
+}
+
+
+
+/*-----------------------corte en 1000px--------------------*/
+@media screen and (max-width:1000px){ 
+    #logo {
+        position: absolute;
+        width: 12%;
+        height: 100px;
+        margin-top: 1%;
+        margin-left:11%;
+        z-index: 3;
+        line-height:0.8;
+    }
+     #main-nav {
+        width:100%;
+        height:120px;
+       
+    }
+    #lista-link {
+        margin-right: 0.5%;       
+        font-size: 1.5em;
+    }
+    #lista-link li a {
+        padding:43px 17px;
+        
+    }
+    
+    
+    #texto1-negro {
+        margin-top:22%;
+        margin-left:22%;
+        font-size: 2.7em;
+        line-height:0.8;/*espacios entre lineas o parrafos*/
+    }    
+    #texto1-azul{
+        font-size: 1.5em;
+    }    
+    #texto1-pequeño{
+        font-size: 0.4em;
+        line-height:1;
+    }
+
+
+     #texto2-negro {
+        margin-top:24%;
+        margin-left:23%;
+        font-size: 2.7em;
+        line-height:0.8;/*espacios entre lineas o parrafos*/
+
+    }    
+    #texto2-azul{
+        text-align: center;
+        color:#4cb4da;
+        font-family: "Syncopate-Bold";
+        font-size: 1.5em;
+        line-height:0.8;
+    }    
+    #texto2-pequeño{
+        font-size: 0.4em;
+    }
+    #vacio1{
+    /*este contenedor vacio, crea el hueco vacio para que se vea la imagen de fondo*/
+    width: 100%;
+    height: 900px;
+    }
+    #texto-vacio1{
+    top:650px;
+    font-size:1.6em; 
+    }
+    #titulo-vacio1{
+    top:850px;
+    font-size:2.1em;    
+    }
+   
+    
+}
+

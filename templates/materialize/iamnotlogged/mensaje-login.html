@@ -1,0 +1,26 @@
+<div id="ventanaInicio">
+        <div id="logo">
+                <img src="{plantilla}/img/logo.png"/>
+        </div><br><br>
+        <center>
+                <div id="tituloSesion">Iniciar Sesion 
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">o Registrate</button>
+                </div>
+        </center>
+        <br>
+        <center>
+                <form action="index.php" method="post" id="formulariologin"  class="formulario" >
+                        <input type="hidden" name="ruta" value="usuario">
+                        <input type="hidden" name="accion" value="dologin">
+                        <br><input id="email" name="email" type="email" size="30" placeholder=" Email ..." ><spam></spam>
+                        <br><br>
+                        <input id="contraseña" name="password" type="password" size="30" placeholder=" Contraseña ..." ><spam></spam>
+                        <br><br><br>
+        
+        <div class="modal-footer">
+                  <center><button type="submit" class="btn btn-default" data-dismiss="modal">Entrar</button></center>
+        </div>
+        </form>
+        </center>
+</div>
+                
